@@ -12,7 +12,12 @@ foreach ($datas as $line) {
   if ($user != $user_fidelity->get_username()) {
     continue;
   }
-  $user_fidelity->add_points($p1, $p2, $p3, $p4, $date);
+  $user_fidelity->add_points([
+    1 => $p1,
+    2 => $p2,
+    3 => $p3,
+    4 => $p4
+  ], $date);
 }
 
 echo "<html>";
